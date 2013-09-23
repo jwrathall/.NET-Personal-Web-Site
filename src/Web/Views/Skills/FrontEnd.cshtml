@@ -1,0 +1,109 @@
+﻿@model Web.ViewModels.TopicViewModel
+@{
+    ViewBag.Title = "Front End Web Development | jeffwrathall.com";
+    Layout = "~/Views/Shared/Templates/Site.cshtml";
+}
+<div class="PanelWrapper">
+    <div class="PanelContent" style="height:700px; padding:20px;">
+        <div style="height:100%; padding-left:15px;width:100%;">
+            <div class="topic-box topic-box-first inactive">
+                <h2 class="topic-title">@Model.Topics.First().Title</h2>
+                <div class="turnoff">
+                    @Html.Partial("Partial/TopicCloseButton")
+                </div>
+                <div class="turnon"><img src= "@Url.Content("~/Assets/Images/next_topic.png")" alt="close"/></div>
+                <div class="topic-detail">
+                    <div class="row-fluid">
+                        <div class="span8">
+                             <p> 
+                                 The advent of robust JavaScript frameworks have really pushed the limits of front end web development. They've brought more fun, coding, structure and 
+	                             limitless possibilities to the front end. This also means that user expectaitons have also increased, web applications are now expected to behave like desktop and mobile apps.
+	                             Static text and page refreshes are quickly become a thing of the past.
+                             </p>
+                             <p>
+                                 I've worked extensively with many major JavaScript frameworks and have been able to produce some really great results ranging from simple animation to two way databinding 
+	                             to ajax style CRUD operations. 	 
+                             </p>  
+                             <p> 
+                                 JavaScript is again at the forefront (not that it really went away!) of any web application.
+                             </p>
+                        </div> 
+                        <div class="span1">
+                            <div class="vertical-divider-dotted" style="min-height:290px;">&nbsp;</div>
+                        </div>
+                        <div class="span3">
+                            <span class="topic-subtitle">Frameworks</span>
+                            <div style="padding-top:30px;">
+                                 <ul>
+                                     <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+                                     <li><a href="http://knockoutjs.com/" target="_blank">Knockout</a></li>
+                                     <li><a href="http://backbonejs.org/" target="_blank">Backbone</a></li>
+                                     <li><a href="http://angularjs.org/" target="_blank">Angularjs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="topic-box topic-box-second inactive">
+                <h2 class="topic-title">@Model.Topics.Skip(1).First().Title</h2>
+                <div class="turnoff"> @Html.Partial("Partial/TopicCloseButton")</div>
+                <div class="turnon"><img src= "@Url.Content("~/Assets/Images/next_topic.png")" alt="close"/></div>
+                <div class="topic-detail">
+                    <div class="row-fluid">
+                        <div class="span8">
+                             <p>This is where I began. Viewing the source of early web sites to see what makes them work. Then building my own pages by placing large garishly coloured boxes on an html page.
+                                 All using tables(...shudder), but I guess everyone has to start somewhere and once I got it figured I was hooked and have been doing it ever since.
+                             </p>
+                             <p>
+                             Fast forward to modern times, modern browsers and a new standard in HTML5. The landscape is rapidly growing ever more exciting and complex. At the same time its really
+                             amazing time to implement and experiment with new features and find innovative uses for the existing foundation.
+                             </p>
+                        </div>
+                        <div class="span1">
+                            <div class="vertical-divider-dotted" style="min-height:290px;">&nbsp;</div>
+                        </div>
+                        <div class="span3"></div>
+                    </div>       
+                </div>
+            </div>
+            <div class="topic-box topic-box-third inactive">
+                <h2 class="topic-title">@Model.Topics.Skip(2).First().Title</h2>
+                <div class="turnoff"> @Html.Partial("Partial/TopicCloseButton")</div>
+                <div class="turnon"><img src= "@Url.Content("~/Assets/Images/next_topic.png")" alt="close"/></div>
+                <div class="topic-detail">
+                    <div class="row-fluid">
+                        <div class="span8">
+                            <p>
+                                "But it's gotta work on IE6". Is what you would say to watch a front end developer start to cry. CSS seperates how the page looks from the pages' content.
+                                This provides the flexibility for your site to look amazing regardless of the browser or device. Since each browers implements CSS rules a little differently, an eye for detail is  
+                                required. I've been using CSS since I started and beleive that CSS is the bridge between the designers vision and finished web site.
+                            </p>
+                            <p>
+                                With frameworks like Bootstrap its now even easier and quicker to set up a responsively designed site that will work across most major browsers and devices. Even cooler is
+                                combining a javascript framework with Bootstrap. 
+                            </p>
+                        </div>
+                        <div class="span1">
+                            <div class="vertical-divider-dotted" style="min-height:290px;">&nbsp;</div>
+                        </div>
+                        <div class="span3">
+                             <span class="topic-subtitle">Frameworks</span>
+                            <div style="padding-top:30px;">
+                                 <ul>
+                                     <li><a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>       
+                </div>
+            </div>
+         @*   <div class="topic-box topic-box-fourth inactive">
+                <h2 class="topic-title">Item 4</h2>
+                <div class="turnoff"> @Html.Partial("Partial/TopicCloseButton")</div>
+            </div>*@
+        </div>
+
+    </div>
+</div>

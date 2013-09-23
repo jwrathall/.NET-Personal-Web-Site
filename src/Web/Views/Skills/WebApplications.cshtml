@@ -1,0 +1,127 @@
+﻿@model Web.ViewModels.TopicViewModel
+@{
+    ViewBag.Title = "Web Applications | jeffwrathall.com";
+    Layout = "~/Views/Shared/Templates/Site.cshtml";
+}
+
+<div class="PanelWrapper">
+    <div class="PanelContent" style="height:700px; padding:20px;">
+        <div style="height:100%; padding-left:15px;width:100%;">
+            <div class="topic-box topic-box-first inactive">
+                <h2 class="topic-title">@Model.Topics.Last().Title</h2>
+                <div class="turnoff">@Html.Partial("Partial/TopicCloseButton")</div>
+                 <div class="turnon"><img src= "@Url.Content("~/Assets/Images/next_topic.png")" alt="close"/></div>
+                <div class="topic-detail">
+                      <div class="row-fluid">
+                        <div class="span8">
+                            <p>
+                                Web development is about solving problems. I've been solving problems and building complex web applications for about 8 years.
+                                The tools I'm most comfortable with is the .NET stack (C#, MVC, LINQ and SQL).  
+                            </p>
+                            <p>
+                                While I'm a big fan of .NET and do most of my work in it, I also realize that its important to keep relevant and increase my skill set. I think that being a polygot 
+                                developer has a huge upside and somewhat necessary in modern development. Each language learned provides a different way of dealing with common problems. 
+                                The more ways a developer can solve a problem, the better the developer becomes. Its also allows the developer to solve the problem with the best tool available.
+                            </p>  
+                            <p> 
+                              In addition to .net, I've worked on projects using PHP and currently I am building Ruby on Rails apps.
+
+                            </p>
+                        </div> 
+                        <div class="span1">
+                            <div class="vertical-divider-dotted" style="min-height:290px;">&nbsp;</div>
+                        </div>
+                        <div class="span3">
+                            <span class="topic-subtitle">Languages</span>
+                            <div style="padding-top:30px;">
+                                 <ul>
+                                     <li><a href="http://www.microsoft.com/net" target="_blank">.Net</a>
+                                         <ul style="margin-left:10px;">
+                                             <li><a href="http://www.asp.net/mvc/mvc3" target="_blank">MVC</a></li>
+                                             <li><a href="http://msdn.microsoft.com/en-us/library/z1zx9t92.aspx" target="_blank">C#</a></li>
+                                             <li><a href="http://msdn.microsoft.com/en-us/library/bb308959.aspx" target="_blank">LINQ</a></li>
+                                             <li><a href="http://www.asp.net/entity-framework" target="_blank">Entity Framework</a></li>
+                                         </ul>
+                                     </li>
+                                     <li><a href="http://php.net/" target="_blank">PHP</a></li>
+                                     <li><a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="topic-box topic-box-second inactive">
+                <h2 class="topic-title">@Model.Topics.Skip(1).First().Title</h2>
+                <div class="turnoff">@Html.Partial("Partial/TopicCloseButton")</div>
+                <div class="turnon"><img src= "@Url.Content("~/Assets/Images/next_topic.png")" alt="close"/></div>
+                 <div class="topic-detail">
+                      <div class="row-fluid">
+                        <div class="span8">
+                            <p>
+                                Its now requisite to have your web site available and fully functioning for both mobile devices and the desktop. Last year almost 15% of web sites were viewed using a mobile browser.
+                                This trend is only going to continue, especially with mobile device sales poised to outpace other devices.
+                            </p>
+                            <p>
+                                For me, responsive design combined with various front end frameworks has made the development challenge of coding for more than one platform much easier.
+                                I strive to use smart coding, best practices and modern tools when working on any project. 
+                            </p>  
+                            <p> 
+                                Native applications are also important. Having recognized this I have started training in Android application development and hope to launch my first app soon.
+
+                            </p>
+                        </div> 
+                        <div class="span1">
+                            <div class="vertical-divider-dotted" style="min-height:290px;">&nbsp;</div>
+                        </div>
+                        <div class="span3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="topic-box topic-box-third inactive">
+                <h2 class="topic-title">@Model.Topics.Skip(2).First().Title</h2>
+                <div class="turnoff">@Html.Partial("Partial/TopicCloseButton")</div>
+                <div class="turnon"><img src= "@Url.Content("~/Assets/Images/next_topic.png")" alt="close"/></div>
+                <div class="topic-detail">
+                      <div class="row-fluid">
+                        <div class="span8">
+                            <p>
+                                Information is at the heart of every web application. The site or app is always displaying information, retrieving specific information or saving new data.
+                                Data and its structure will often dictate the business rules that need to be applied to the application. 
+                            </p>
+                            <p>
+                                I've had lots of experience retrieving and saving data as almost every site that I have worked on has had a data component. In addition I have also had the opportunity
+                                to construct and architect databases for many web sites. 
+                            </p>  
+                            <p> 
+
+                            </p>
+                        </div> 
+                        <div class="span1">
+                            <div class="vertical-divider-dotted" style="min-height:290px;">&nbsp;</div>
+                        </div>
+                        <div class="span3">
+                            <span class="topic-subtitle">Databases</span>
+                            <div style="padding-top:30px;">
+                                 <ul>
+                                     <li><a href="http://www.microsoft.com/en-us/sqlserver/default.aspx" target="_blank">MSSql (2008,2012) </a>
+                                         <ul style="margin-left:10px;">
+                                             <li><a href="http://www.asp.net/entity-framework" target="_blank">Entity Framework</a></li>
+                                             <li><a href="http://msdn.microsoft.com/en-us/library/bb308959.aspx" target="_blank">LINQ</a></li>
+                                         </ul>
+                                     </li>
+                                     <li><a href="http://www.mysql.com/" target="_blank">MySql</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+@*            <div class="topic-box topic-box-fourth inactive">
+                <h2 class="topic-title">@Model.Topics.Last().Title</h2>
+                <div class="turnoff"><img src="../../Assets/Images/close.png" /></div>
+            </div>*@
+        </div>
+
+    </div>
+</div>

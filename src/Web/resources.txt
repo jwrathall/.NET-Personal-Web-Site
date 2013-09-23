@@ -1,0 +1,2 @@
+﻿http://rachelappel.com/razor/partial-views-in-asp-net-mvc-3-w-the-razor-view-engine/
+http://msdn.microsoft.com/en-us/library/gg416514(v=vs.98).aspx

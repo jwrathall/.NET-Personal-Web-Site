@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C05DF327-BA75-474F-9368-05AEC95354DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Data.EF5</RootNamespace>
+    <AssemblyName>Data.EF5</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201210102056228_InitialCreate.cs" />
+    <Compile Include="Migrations\201210102056228_InitialCreate.Designer.cs">
+      <DependentUpon>201210102056228_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201210182049561_UpdateSubjectTables.cs" />
+    <Compile Include="Migrations\201210182049561_UpdateSubjectTables.Designer.cs">
+      <DependentUpon>201210182049561_UpdateSubjectTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201210242223534_AddSocialLinks_UpdateSubject.cs" />
+    <Compile Include="Migrations\201210242223534_AddSocialLinks_UpdateSubject.Designer.cs">
+      <DependentUpon>201210242223534_AddSocialLinks_UpdateSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201211122212226_AddSocialLinks.cs" />
+    <Compile Include="Migrations\201211122212226_AddSocialLinks.Designer.cs">
+      <DependentUpon>201211122212226_AddSocialLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201211282157484_AddPastSites.cs" />
+    <Compile Include="Migrations\201211282157484_AddPastSites.Designer.cs">
+      <DependentUpon>201211282157484_AddPastSites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201211282223008_ChangePastSitesAddRoleAssociation.cs" />
+    <Compile Include="Migrations\201211282223008_ChangePastSitesAddRoleAssociation.Designer.cs">
+      <DependentUpon>201211282223008_ChangePastSitesAddRoleAssociation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201211282245215_ChangePastSitesAddSiteOrderby.cs" />
+    <Compile Include="Migrations\201211282245215_ChangePastSitesAddSiteOrderby.Designer.cs">
+      <DependentUpon>201211282245215_ChangePastSitesAddSiteOrderby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201212062111040_AddDatabaseAssociations.cs" />
+    <Compile Include="Migrations\201212062111040_AddDatabaseAssociations.Designer.cs">
+      <DependentUpon>201212062111040_AddDatabaseAssociations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201212062238041_ChangeDatabaseAssociations.cs" />
+    <Compile Include="Migrations\201212062238041_ChangeDatabaseAssociations.Designer.cs">
+      <DependentUpon>201212062238041_ChangeDatabaseAssociations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201212102214550_AddSkillsToSites.cs" />
+    <Compile Include="Migrations\201212102214550_AddSkillsToSites.Designer.cs">
+      <DependentUpon>201212102214550_AddSkillsToSites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201212202226321_AddContactInfo.cs" />
+    <Compile Include="Migrations\201212202226321_AddContactInfo.Designer.cs">
+      <DependentUpon>201212202226321_AddContactInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201309021226226_AddSortIdSocial.cs" />
+    <Compile Include="Migrations\201309021226226_AddSortIdSocial.Designer.cs">
+      <DependentUpon>201309021226226_AddSortIdSocial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201309021253276_UpdateIconToClassName.cs" />
+    <Compile Include="Migrations\201309021253276_UpdateIconToClassName.Designer.cs">
+      <DependentUpon>201309021253276_UpdateIconToClassName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201309031222494_AddDateToContactInfo.cs" />
+    <Compile Include="Migrations\201309031222494_AddDateToContactInfo.Designer.cs">
+      <DependentUpon>201309031222494_AddDateToContactInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="Repositories\ContactInfoRepository.cs" />
+    <Compile Include="Repositories\PastWorkRepository.cs" />
+    <Compile Include="Repositories\SocialRepository.cs" />
+    <Compile Include="Repositories\SubjectRepository.cs" />
+    <Compile Include="Repositories\TadantechContext.cs" />
+    <Compile Include="Repositories\TopicRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{EE7A94C5-0060-409E-ACFD-FD059D133FE2}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201210102056228_InitialCreate.resx">
+      <DependentUpon>201210102056228_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201210182049561_UpdateSubjectTables.resx">
+      <DependentUpon>201210182049561_UpdateSubjectTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201210242223534_AddSocialLinks_UpdateSubject.resx">
+      <DependentUpon>201210242223534_AddSocialLinks_UpdateSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201211122212226_AddSocialLinks.resx">
+      <DependentUpon>201211122212226_AddSocialLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201211282157484_AddPastSites.resx">
+      <DependentUpon>201211282157484_AddPastSites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201211282223008_ChangePastSitesAddRoleAssociation.resx">
+      <DependentUpon>201211282223008_ChangePastSitesAddRoleAssociation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201211282245215_ChangePastSitesAddSiteOrderby.resx">
+      <DependentUpon>201211282245215_ChangePastSitesAddSiteOrderby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201212062111040_AddDatabaseAssociations.resx">
+      <DependentUpon>201212062111040_AddDatabaseAssociations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201212062238041_ChangeDatabaseAssociations.resx">
+      <DependentUpon>201212062238041_ChangeDatabaseAssociations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201212102214550_AddSkillsToSites.resx">
+      <DependentUpon>201212102214550_AddSkillsToSites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201212202226321_AddContactInfo.resx">
+      <DependentUpon>201212202226321_AddContactInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201309021226226_AddSortIdSocial.resx">
+      <DependentUpon>201309021226226_AddSortIdSocial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201309021253276_UpdateIconToClassName.resx">
+      <DependentUpon>201309021253276_UpdateIconToClassName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201309031222494_AddDateToContactInfo.resx">
+      <DependentUpon>201309031222494_AddDateToContactInfo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

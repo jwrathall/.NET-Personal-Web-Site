@@ -1,0 +1,67 @@
+﻿@using Data.EF5.Repositories
+@using Domain.Data.Respositories
+@using Web.ViewModels
+@{
+    ISocialRepository _socialRepository = new SocialRepository();
+    var _model = new FooterViewModel(_socialRepository);
+}
+<div id="Footer">
+    <div id="FooterWrapper">
+        <div id="FooterContent">
+        <div class="row">
+            <div class="span3">
+                <div id="siteLinks">
+                     <ul>
+                        <li>
+                            <a href="../home/index">Home</a>
+                        </li>
+                        <li>
+                            <a href="../Topics/FrontEnd">Front End</a>
+                        </li>
+                        <li>
+                            <a href="../Topics/WebApplications">Web Applications</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","About")">About</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","PastWork")">Past Stuff</a>
+                        </li>
+                       @* <li>
+                            <a href="../Blog/index">Blog</a>
+                        </li>*@
+                    </ul>
+                </div>
+            </div>
+            <div class="span4 ">
+                <div style="width:100%;margin:0px auto;">
+                    <div style="width:50%; margin-left:95px;">
+                        <p>Oberfoehringer Strasse 170G<br/>
+                            Munich, Germany<br/> 
+                            +(0)89-9571-2615
+                        </p> 
+                        <p> 
+                            <a href="mailto:hello@jeffwrathall.com"><span>hello@jeffwrathall.com</span></a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="span3 ">
+               <ul id="SocialFooter">
+                  @foreach (var s in _model.socialLinks)
+                  {
+                      <li>
+                         <a href="@s.Url" class="@s.Class_name" target="_blank"><span>@s.Title</span></a>
+                      </li>
+                  }
+                    </ul>  
+
+            </div>
+        </div> 
+            <div style="float:left; margin-top:40px;">
+            &copy;Jeff Wrathall
+            </div>  
+        </div>
+    </div>
+</div>

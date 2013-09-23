@@ -1,0 +1,86 @@
+﻿
+@model Web.ViewModels.HomeViewModel
+@{
+    ViewBag.Title = "Freelance Web Developer | jeffwrathall.com";
+}
+@*Refactor the panels into a for each with some conditions*@
+
+<div id="HomeContent">
+    <div class="PanelWrapper">
+        <div class="PanelContent" style="height:600px;">
+            <div style="padding-left:10px;">
+                <div class="row">
+                    <div class="span10">
+                        <div style="border-top: dotted #bcbcbc 1px; width:100%; height:1px;padding-bottom:14px; width:95%;"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span5">
+                        <div class="Panel">
+                            @{ 
+                                var subjectItem = Model.Subjects.Take(1).Single(); 
+                                <span class="PanelTitle"><a href="/Topics/@subjectItem.Url" >@subjectItem.Title</a></span>
+                                <p>
+                                    @subjectItem.Summary
+                                </p>
+                                <div style="padding:0 35px 8px 0; position:absolute; top:0;right:0;"><a href="@Url.Action(subjectItem.Url, "Skills")" class="next-detail"></a></div>
+                            }
+
+                        </div>
+                    </div>
+                    <div class="span5">
+                        <div class="Panel">
+                            @{
+                                var subjectItem1 = Model.Subjects.Skip(1).Take(1).Single();
+                                <span class="PanelTitle"><a href="/Topics/@subjectItem1.Url" >@subjectItem1.Title</a></span>
+                                <p>
+                                    @subjectItem1.Summary
+                                </p>
+                                 <div style="padding:0 35px 8px 0; position:absolute; top:0;right:0;"><a href="@Url.Action(subjectItem1.Url, "Skills")" class="next-detail"></a></div>
+                            }   
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span5">
+                        <div style="border-top: dotted #bcbcbc 1px; width:100%; height:1px;padding-bottom:14px; width:90%;"></div>
+                    </div>
+                    <div class="span5">
+                        <div style="border-top: dotted #bcbcbc 1px; width:100%; height:1px;padding-bottom:14px; width:90%;"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span5">
+                        <div class="Panel">
+                            @{ 
+                                var subjectItem2 = Model.Subjects.Skip(2).Take(1).Single(); 
+                                <span class="PanelTitle"><a href="@Url.Action("Index","About")" >@subjectItem2.Title</a></span>
+                                <p>
+                                    @subjectItem2.Summary
+                                </p>
+                                 <div style="padding:0 35px 8px 0; position:absolute; top:0;right:0;"><a href="@Url.Action("Index","About")" class="next-detail"></a></div>
+                            }         
+                        </div>
+                    </div>
+                    <div class="span5">
+                        <div class="Panel">
+                            @{ 
+                                var subjectItem3 = Model.Subjects.Skip(3).Take(1).Single(); 
+                                <span class="PanelTitle"><a href="@subjectItem3.Url" >@subjectItem3.Title</a></span>
+                                <p>
+                                    @subjectItem3.Summary
+                                </p>
+                                 <div style="padding:0 35px 8px 0; position:absolute; top:0;right:0;"><a href="@Url.Action("Index","PastWork")" class="next-detail"></a></div>
+                            }    
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span10">
+                        <div style="border-top: dotted #bcbcbc 1px; width:100%; height:1px;padding-bottom:14px; width:95%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

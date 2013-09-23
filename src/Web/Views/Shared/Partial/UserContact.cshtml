@@ -1,0 +1,95 @@
+﻿@model Web.ViewModels.ContactViewModel
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "sendUserContact" }))
+       {
+        <fieldset>
+            <div class="control-group pull-left ">
+                <div class="controls" title="Enter first name">
+                    @Html.LabelFor(m => m.UserRequest.Firstname,"First Name")
+                    <div class="input-append" style="width:100%;">
+                        @Html.TextBoxFor(m => m.UserRequest.Firstname, new { Name = "firstname",@class = "input-class" })
+                    </div>
+                </div>
+            </div>
+            <div class="control-group pull-left">
+                <div class="controls" title="Enter last name">
+                    @Html.LabelFor(m => m.UserRequest.Lastname, "Last Name") 
+                    <div class="input-append">
+                        @Html.TextBoxFor(m => m.UserRequest.Lastname, new { Name = "lastname", @class = "input-class" })
+                    </div>
+                </div>
+            </div>
+            <div class="control-group pull-left">
+                <div class="controls" title="Enter email">
+                    @Html.LabelFor(m => m.UserRequest.Email, "Email")
+                    <div class="input-append">
+                        @Html.TextBoxFor(m => m.UserRequest.Email, new { Name = "email", @class = "input-class" })
+                    </div>
+                </div>
+            </div>
+            <div class="control-group pull-left">
+                <div class="controls" title="Enter message">
+                    @Html.LabelFor(m => m.UserRequest.Message, "Message")
+                    <div class="input-append">
+                        @Html.TextAreaFor(m => m.UserRequest.Message, new { Name = "message", @class = "input-class" })
+                    </div>
+                </div>
+            </div>
+        </fieldset> 
+        <div class="form-actions pull-left">
+            <button type="submit" class="btn btn-inverse">Send</button>
+            <button type="reset" class="btn">Cancel</button>
+        </div>
+        } 
+        
+<script type="text/javascript" language="javascript">
+    //http://alittlecode.com/files/jQuery-Validate-Demo/
+    $(function () {
+        $('form').validate(
+            {
+                submitHandler: function () {
+                    submitForm($('#sendUserContact'));
+                    return false;
+
+                },
+                rules: {
+                    firstname: {
+                        minlength: 2,
+                        required: true
+                    },
+                    lastname: {
+                        minlength: 2,
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    message: {
+                        minlength: 2,
+                        required: true
+                    }
+                },
+                highlight: function (label) {
+                    $(label).closest('.control-group').addClass('error');
+                },
+                success: function (label) {
+                    //console.log('labels ok');
+                    label
+                        .text('OK!').addClass('valid')
+                        .closest('.control-group').addClass('success');
+                }
+            });
+        function submitForm(form) {
+            $.ajax({
+                type: "POST",
+                url: "/About",
+                data: form.serialize(),
+                success: function (data) {
+                    $('#contactForm').html(data);
+                    $('#modalContactConfirm').modal('show');
+                },
+            });
+            return false;
+        }
+    });
+</script>

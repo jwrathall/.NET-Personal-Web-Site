@@ -1,0 +1,112 @@
+@{
+    ViewBag.Title = "About Me | jeffwrathall.com";
+    Layout = "~/Views/Shared/Templates/Site.cshtml";
+}
+<div class="PanelWrapper">
+    <div class="PanelContent" style="height:850px; padding:20px;">
+        <div style="padding-left:15px;">
+            <div class="row-fluid">
+                
+                <div class="span6">
+                    <div style="height:110px; width:100%; background-color:#D7D7D7; margin:0 auto; text-align:center;">
+                        <div style="padding:10px 0 5px 5px">
+                            <div class="bio-title">Jeff Wrathall</div>
+                            <span>Web Developer &mdash; Freelance</span>
+                            <div>
+                                Ht: 188cm &emsp;Wt: 81.2kg&emsp;Shoots : Left<br/> 
+                                Acquired: 2004 Entry Draft&emsp;Home town: Winnipeg, Canada
+
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:8px;"></div>
+                    <div style="height:110px; width:100%; background-color:#D7D7D7">
+                        <div style="padding:10px 0 5px 5px">
+                            <p>
+                                This veteran has played 8 full years with 4 different organizations. An enthusiastic developer,
+                                Jeff is best known for his dedication, positive attitude and ability to solve problems.
+                                He is a valuable asset to your team or project.
+                            </p>
+                        </div>
+                    </div>
+                    <div style="height:8px;"></div>
+                    <div style="width:100%; background-color:#D7D7D7">
+                        <div style="padding:10px 5px 5px 5px">
+                            <div class="bio-title" style="margin:0 auto; text-align:center;">Career Stats</div>    
+                            <div>
+                                <table class="table">
+                                    <tr>
+                                        <th>Skill</th>
+                                        <th>Years</th>
+                                        <th>Points</th>
+                                    </tr>    
+                                    <tr>
+                                        <td>asp.Net</td>
+                                        <td>6 years</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MVC</td>
+                                        <td>2 years</td>
+                                        <td>80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LINQ</td>
+                                        <td>2 years</td>
+                                        <td>80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Entity Framework</td>
+                                        <td>1 year</td>
+                                        <td>60</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ruby on Rails</td>
+                                        <td>< 1 year</td>
+                                        <td>40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HTML</td>
+                                        <td>6 years</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CSS</td>
+                                        <td>6 years</td>
+                                        <td>90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>javascript</td>
+                                        <td>6 years</td>
+                                        <td>90</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                 <div class="span6">
+                    <div id="contactForm">
+                        @Html.Partial("Partial/UserContact")
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div id="">
+    <div id="modalContactConfirm" class="modal hide fade">
+        <div class="modal-header">
+            <h3>Thanks for dropping me a line</h3>
+        </div>
+        <div class="modal-body">
+            <p>I'll be sure to get back to you as soon as I can.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" data-dismiss="modal" class="btn">Close</a>
+        </div>
+    </div>           
+</div>
